@@ -1,0 +1,47 @@
+import matplotlib.pyplot as plt
+import seaborn as sns
+import pandas as pd
+
+def plot_target_distribution(df):
+    """Visualize the class distribution of recidivism."""
+    plt.figure(figsize=(6,4))
+    sns.countplot(x='Recidivism - Return to Prison numeric', data=df)
+    plt.title('Recidivism Class Distribution (0 = No, 1 = Yes)')
+    plt.xlabel('Recidivism')
+    plt.ylabel('Count')
+    plt.show()
+
+def plot_recidivism_by_age(df):
+    """Visualize recidivism rate by age group."""
+    df_age_plot = df.copy()
+    df_age_plot['Age Bucket'] = pd.cut(
+        df_age_plot['Age At Release'] * df_age_plot['Age At Release'].std() + df_age_plot['Age At Release'].mean(),
+        bins=[0, 25, 35, 45, 55, 100],
+        labels=['<25', '25-34', '35-44', '45-54', '55+']
+    )
+    plt.figure(figsize=(8,4))
+    sns.barplot(x='Age Bucket', y='Recidivism - Return to Prison numeric', data=df_age_plot)
+    plt.title('Recidivism Rate by Age Group')
+    plt.ylabel('Recidivism Rate')
+    plt.xlabel('Age Group')
+    plt.show()
+
+def plot_recidivism_by_race(df):
+    """Visualize recidivism rate by race/ethnicity."""
+    plt.figure(figsize=(10,5))
+    sns.barplot(x='Race - Ethnicity', y='Recidivism - Return to Prison numeric', data=df)
+    plt.title('Recidivism Rate by Race/Ethnicity')
+    plt.xticks(rotation=45)
+    plt.ylabel('Recidivism Rate')
+    plt.xlabel('Race/Ethnicity')
+    plt.show()
+
+def plot_recidivism_by_offense(df):
+    """Visualize recidivism rate by offense type."""
+    plt.figure(figsize=(12,5))
+    sns.barplot(x='Convicting Offense Type', y='Recidivism - Return to Prison numeric', data=df)
+    plt.title('Recidivism Rate by Convicting Offense Type')
+    plt.xticks(rotation=45)
+    plt.ylabel('Recidivism Rate')
+    plt.xlabel('Offense Type')
+    plt.show()
