@@ -57,7 +57,7 @@ Open this file to view the complete data pipeline: preprocessing, modeling, and 
 
 ## 📊 Overview
 
-This project builds and compares machine learning models to predict recidivism — the tendency of a convicted criminal to reoffend. The goal is to support better targeting of rehabilitation services and reduce repeated incarceration.
+This project builds and compares machine learning models to predict recidivism and the tendency of a convicted criminal to reoffend. The goal is to support better targeting of rehabilitation services and reduce repeated incarceration.
 
 ---
 
@@ -75,12 +75,6 @@ pip install -r requirements.txt
 2. **Run the main notebook**
 ```bash
 jupyter notebook notebooks/recidivism_analysis.ipynb
----
-
-## 🧪 Line Testing
-
-> *Note: A placeholder test file `test_rehab_model.py` is referenced but was not created for this version. Future iterations should include unit tests for feature engineering and model validation.*
-
 ---
 ## 🔍 Error Analysis Summary
 
