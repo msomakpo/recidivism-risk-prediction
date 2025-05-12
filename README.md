@@ -66,13 +66,6 @@ pip install -r requirements.txt
 2. **Run the main notebook**
 ```bash
 jupyter notebook notebooks/recidivism_analysis.ipynb
-```
-
-3. **Or run the Python script**
-```bash
-python recidivism_analysis.py
-```
-
 ---
 
 ## 🧪 Line Testing with Pytest
@@ -100,4 +93,4 @@ pytest tests/
 
 ## ⚖️ Ethical Considerations
 
-Predictive models in criminal justice risk reinforcing systemic biases. We use interpretable models, fairness-aware metrics, and include ethical oversight recommendations in this project. These tools must be implemented responsibly.
+Predictive models in criminal justice risk reinforcing systemic biases. We use interpretable models, fairness-aware metrics, error analysis on misclassified cases, and include ethical oversight recommendations in this project. These tools must be implemented responsibly.
