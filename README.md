@@ -23,15 +23,13 @@ Predicting recidivism using machine learning
 │
 ├── docs               <- A default mkdocs project; see www.mkdocs.org for details
 ├── models             <- Trained and serialized models, model predictions, or model summaries
-├── notebooks          <- Jupyter notebooks (e.g., `1.0-initial-data-exploration.ipynb`)
+├── notebooks          <- Jupyter notebooks (e.g., `recidivism_analysis.ipynb`)
 ├── pyproject.toml     <- Project configuration
 ├── references         <- Data dictionaries, manuals, and other explanatory materials.
 ├── reports            <- Generated analysis as HTML, PDF, etc.
 │   └── figures        <- Generated graphics and figures
 ├── requirements.txt   <- The requirements file for environment setup
 ├── setup.cfg          <- Configuration for flake8, etc.
-├── tests              <- Unit tests for line testing the code
-│   └── test_rehab_model.py
 └── recidivism_predictor   <- Source code for this project
     ├── __init__.py
     ├── config.py
@@ -43,6 +41,17 @@ Predicting recidivism using machine learning
     │   └── train.py
     └── plots.py
 ```
+---
+## 📓 Notebook Location
+
+The main analysis notebook is located in the `notebooks/` folder:
+
+```
+notebooks/
+└── recidivism_analysis.ipynb
+```
+
+Open this file to view the complete data pipeline: preprocessing, modeling, and evaluation.
 
 ---
 
@@ -68,13 +77,14 @@ pip install -r requirements.txt
 jupyter notebook notebooks/recidivism_analysis.ipynb
 ---
 
-## 🧪 Line Testing with Pytest
+## 🧪 Line Testing
 
-Basic line tests for feature engineering, data cleaning, and model training:
-```bash
-pip install pytest
-pytest tests/
-```
+> *Note: A placeholder test file `test_rehab_model.py` is referenced but was not created for this version. Future iterations should include unit tests for feature engineering and model validation.*
+
+---
+## 🔍 Error Analysis Summary
+
+Error analysis on the XGBoost model revealed that false negatives (missed reoffenders) were most concentrated among younger individuals in District 10. False positives were common for high-frequency offense types. These patterns informed fairness discussions and underscore the value of including more context-aware features like rehabilitation program completion or district-level support access.
 
 ---
 
@@ -93,4 +103,4 @@ pytest tests/
 
 ## ⚖️ Ethical Considerations
 
-Predictive models in criminal justice risk reinforcing systemic biases. We use interpretable models, fairness-aware metrics, error analysis on misclassified cases, and include ethical oversight recommendations in this project. These tools must be implemented responsibly.
+Predictive models in criminal justice risk reinforcing systemic biases. This project incorporates fairness-aware metrics, interpretable modeling, and error analysis to identify and mitigate unintended consequences. Responsible implementation remains essential.
