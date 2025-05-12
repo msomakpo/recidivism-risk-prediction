@@ -1,6 +1,5 @@
 ipython
 jupyterlab
-loguru
 matplotlib
 mkdocs
 notebook
@@ -8,9 +7,10 @@ numpy
 pandas
 pip
 pytest
-python-dotenv
-ruff
+seaborn
 scikit-learn
-tqdm
-typer
--e .
+xgboost
+imbalanced-learn
+jupyter
+pytest
+jupyter
