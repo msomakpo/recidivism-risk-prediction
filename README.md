@@ -76,13 +76,6 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook notebooks/recidivism_analysis.ipynb
 ---
-```
-## Error Analysis Summary
-
-Error analysis on the XGBoost model revealed that false negatives (missed reoffenders) were most concentrated among younger individuals in District 10. False positives were common for high-frequency offense types. These patterns informed fairness discussions and underscore the value of including more context-aware features like rehabilitation program completion or district-level support access.
-
----
-```
 ---
 ```
 ## Citations
