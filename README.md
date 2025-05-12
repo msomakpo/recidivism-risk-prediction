@@ -42,7 +42,7 @@ Predicting recidivism using machine learning
     └── plots.py
 ```
 ---
-## 📓 Notebook Location
+## Notebook Location
 
 The main analysis notebook is located in the `notebooks/` folder:
 
@@ -55,13 +55,13 @@ Open this file to view the complete data pipeline: preprocessing, modeling, and 
 
 ---
 
-## 📊 Overview
+## Overview
 
 This project builds and compares machine learning models to predict recidivism and the tendency of a convicted criminal to reoffend. The goal is to support better targeting of rehabilitation services and reduce repeated incarceration.
 
 ---
 
-## 📦 Setup
+## Setup
 
 1. **Clone the repo and create a virtual environment**
 ```bash
@@ -76,13 +76,16 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook notebooks/recidivism_analysis.ipynb
 ---
-## 🔍 Error Analysis Summary
+```
+## Error Analysis Summary
 
 Error analysis on the XGBoost model revealed that false negatives (missed reoffenders) were most concentrated among younger individuals in District 10. False positives were common for high-frequency offense types. These patterns informed fairness discussions and underscore the value of including more context-aware features like rehabilitation program completion or district-level support access.
 
 ---
-
-## 📚 Citations
+```
+---
+```
+## Citations
 
 - National Institute of Justice. (2024, September 5). *NIJ’s Role Under the First Step Act*. https://nij.ojp.gov/topics/corrections/nijs-role-under-first-step-act  
 - Qlik. (2025, March 16). *What is Predictive Modeling? Types & Techniques*. https://www.qlik.com/us/predictive-analytics/predictive-modeling  
@@ -93,8 +96,9 @@ Error analysis on the XGBoost model revealed that false negatives (missed reoffe
 - Merriam-Webster. (2019). *Definition of Recidivism*. https://www.merriam-webster.com/dictionary/recidivism  
 - Miller, G. (2022, March 18). *The Invention of Incarceration*. JSTOR Daily. https://daily.jstor.org/the-invention-of-incarceration/
 
+```
 ---
-
-## ⚖️ Ethical Considerations
+```
+## Ethical Considerations
 
 Predictive models in criminal justice risk reinforcing systemic biases. This project incorporates fairness-aware metrics, interpretable modeling, and error analysis to identify and mitigate unintended consequences. Responsible implementation remains essential.
